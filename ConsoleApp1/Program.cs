@@ -5,34 +5,18 @@ static class Program
 
     static void Main(string[] args)
     {
-
+        
         for (int i = 1; i <= 100; i++)
         {
+            bool Even = i.CanBeMultipliedBy(2);
 
-            bool canBeMultipliedByFive = i.CanBeMultipliedBy(5);
-            bool canBeMultipliedByThree = i.CanBeMultipliedBy(3);
-
-            if (canBeMultipliedByFive && canBeMultipliedByThree)
+            if (Even)
             {
-
-                Console.WriteLine("{0}: FizzBuzz", i);
-            }
-            else if (canBeMultipliedByThree)
-            {
-                
-                Console.WriteLine("{0}: Fizz", i);
-
-            }
-            else if (canBeMultipliedByFive)
-            {
-
-                Console.WriteLine("{0}: Buzz", i);
-
+                Console.WriteLine(i * i);
             }
             else
             {
-
-                Console.WriteLine(i);
+                Console.WriteLine("{0}", i);
             }
         }
 
